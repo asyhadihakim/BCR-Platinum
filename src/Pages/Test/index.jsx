@@ -3,12 +3,13 @@ import './test.css'
 // import { Calendar } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import InputDateRange from './dateRange';
-import HitungMundur from './hitungMundur';
-import InputCopyValue from './inputCopyValue';
-import HitungMundur10mnt from './HitungMundur10mnt';
+// import InputDateRange from './dateRange';
+// import HitungMundur from './hitungMundur';
+// import InputCopyValue from './inputCopyValue';
+// import HitungMundur10mnt from './HitungMundur10mnt';
 import PDFfile from './reactPDF';
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
+import Animation from './animation';
 // import { useEffect } from 'react';
 // import { addDays } from 'rsuite/esm/internals/utils/date';
 
@@ -46,24 +47,15 @@ const TestPage = () => {
     // }
 
     // console.log(tanggal);
-    const slip = localStorage.getItem('slip')
+    // const slip = localStorage.getItem('slip')
 
     return (
-
-        <div className="border-2 border-red-600 p-10 flex flex-col gap-10">
-
-            <InputDateRange />
-
-            <HitungMundur />
-
-            <InputCopyValue />
-
-            <HitungMundur10mnt />
-
+        <div className='h-[2000px]'>
             <MyPDF />
-
-            <img src={slip} alt="" />
+            <Animation />
+            
         </div>
+
     )
 }
 
@@ -91,7 +83,7 @@ export const MyPDF = () => {
                     </PDFDownloadLink>
                 </div>
 
-                <PDFViewer width={557} height={162} showToolbar={false} className='max-sm:w-[300px]'>
+                <PDFViewer width={557} height={162} showToolbar={false}  className='max-sm:w-[300px]'>
                     <PDFfile />
                 </PDFViewer>
             </div>

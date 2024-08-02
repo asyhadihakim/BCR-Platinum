@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Footer from "../../Components/Footer"
 import Navbar from "../../Components/Navbar"
-import MainSection from "../../Sections/MainSection"
+import  { MainSection2 } from "../../Sections/MainSection"
 import SearchCars from "../../Sections/SearchCars"
 // import { useNavigate } from "react-router-dom"
 
@@ -28,17 +28,17 @@ const RentalsPage = ({ inMenu }) => {
 
     
     return (
-        <div>
+        <div className={` relative  ${isFocused ? 'focused' : ''}`}>
             <Navbar 
-            isFocused={isFocused} 
+
             isOpen={isMenuOpen} 
             toggleMenu={toggleMenu} 
             setIsMenuOpen={setIsMenuOpen} 
             logoBtn={false}/>
 
-            <MainSection 
+            <MainSection2 
             isOpen={isMenuOpen} 
-            isFocused={isFocused} 
+            // isFocused={isFocused} 
             ptMainSection={false}/>
 
             <SearchCars 
